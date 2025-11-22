@@ -657,21 +657,21 @@ body {
   
 }
 .tile-band {
-  background-image: url("images/Band.png");
+  background-image: url("./images/Band.png");
  
  
 }
 
 .tile-hiphop {
-  background-image: url("images/hiphop.jpg");
+  background-image: url("./images/hiphop.jpg");
 }
 
 .tile-kundiman {
-  background-image: url("images/Kundiman.png");
+  background-image: url("./images/Kundiman.png");
 }
 
 .tile-ppop {
-  background-image: url("images/Ppop.png");
+  background-image: url("./images/Ppop.png");
 }
 
 body {
