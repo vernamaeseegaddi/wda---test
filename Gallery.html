@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gallery</title>
+</head>
+<body class="gallery-page-bg">
+ <header class="navbar">
+    <div class="logo">I-Entertainment</div>
+
+    <!-- Hidden checkbox -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+    <!-- Hamburger icon -->
+    <label for="menu-toggle" class="hamburger">☰</label>
+
+    <nav class="nav-links">
+      <a href="HomePage.html" >Home</a>
+      <a href="TriviaPage.html">Trivia</a>
+      <a href="AboutPage.html" >About Page</a>
+      <a href="Gallery.html"  class="active">Gallery </a>
+      <a href="NewsPage.html">News</a>
+      <a href="ContactUsPage.html">Contact</a>
+    </nav>
+</header>
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      
+      <li aria-current="page">Gallery</li>
+    </ol>
+  </nav>
+  <!-- Centered gallery -->
+  <main class="gallery-wrapper centered">
+
+
+   <!-- <h1 class="gallery-heading">GALLERY</h1>-->
+
+    <div class="gallery" id="gallery">
+      <a href="#img1" class="gallery-item">
+        <img src="Images/Gallery/AplDeAp.png" alt="Apple De Ap">
+      </a>
+      <a href="#img2" class="gallery-item">
+        <img src="Images/Gallery/AmielSol.png" alt="Amiel Sol performance">
+      </a>
+      <a href="#img3" class="gallery-item">
+        <img src="Images/Gallery/Arthur.png" alt="Arthur concert photo">
+      </a>
+      <a href="#img4" class="gallery-item">
+        <img src="Images/Gallery/Ash.png" alt="Ash live performance">
+      </a>
+      <a href="#img5" class="gallery-item">
+        <img src="Images/Gallery/Bini.png" alt="Bini event photo">
+      </a>
+      <a href="#img6" class="gallery-item">
+        <img src="Images/Gallery/CupOfJoe.png" alt="Cup of Joe band photo">
+      </a>
+      <a href="#img7" class="gallery-item">
+        <img src="Images/Gallery/DNA.png" alt="DNA performance">
+      </a>
+      <a href="#img8" class="gallery-item">
+        <img src="Images/Gallery/Eco.png" alt="Eco concert image">
+      </a>
+      <a href="#img9" class="gallery-item">
+        <img src="Images/Gallery/Elija.png" alt="Elija performance">
+      </a>
+      <a href="#img10" class="gallery-item">
+        <img src="Images/Gallery/ElyBuendia.png" alt="Ely Buendia event">
+      </a>
+      <a href="#img11" class="gallery-item">
+        <img src="Images/Gallery/FlowG.png" alt="Flow G live performance">
+      </a>
+      <a href="#img12" class="gallery-item">
+        <img src="Images/Gallery/HeyJune.png" alt="Hey June photo">
+      </a>
+      <a href="#img13" class="gallery-item">
+        <img src="Images/Gallery/IVofSpades.png" alt="IV of Spades band">
+      </a>
+      <a href="#img14" class="gallery-item">
+        <img src="Images/Gallery/Kyla.png" alt="Kyla performance">
+      </a>
+      <a href="#img15" class="gallery-item">
+        <img src="Images/Gallery/LolaAmour.png" alt="Lola Amour band live">
+      </a>
+      <a href="#img16" class="gallery-item">
+        <img src="Images/Gallery/Maki.png" alt="Maki concert photo">
+      </a>
+      <a href="#img17" class="gallery-item">
+        <img src="Images/Gallery/Mdee.png" alt="Mdee event">
+      </a>
+      <a href="#img18" class="gallery-item">
+        <img src="Images/Gallery/Morobeat.png" alt="Morobeat performance">
+      </a>
+    </div>
+  </main>
+
+  <!-- LIGHTBOXES: one per image, with prev/next arrows and captions -->
+
+  <div class="lightbox" id="img1">
+    <div class="lightbox-inner">
+      <a href="#img18" class="lightbox-nav lightbox-prev">&#10094;</a>
+      <img src="Images/Gallery/AplDeAp.png" alt="Apple De Ap">
+      <div class="lightbox-caption">Apple De Ap</div>
+      <a href="#img2" class="lightbox-nav lightbox-next">&#10095;</a>
+      <a href="#gallery" class="lightbox-close">&times;</a>
+    </div>
+  </div>
+
+  <div class="lightbox" id="img2">
+    <div class="lightbox-inner">
+      <a href="#img1" class="lightbox-nav lightbox-prev">&#10094;</a>
+      <img src="Images/Gallery/AmielSol.png" alt="Amiel Sol performance">
+      <div class="lightbox-caption">Amiel Sol performance</div>
+      <a href="#img3" class="lightbox-nav lightbox-next">&#10095;</a>
+      <a href="#gallery" class="lightbox-close">&times;</a>
+    </div>
+  </div>
+
+  <div class="lightbox" id="img3">
+    <div class="lightbox-inner">
+      <a href="#img2" class="lightbox-nav lightbox-prev">&#10094;</a>
+      <img src="Images/Gallery/Arthur.png" alt="Arthur concert photo">
+      <div class="lightbox-caption">Arthur concert photo</div>
+      <a href="#img4" class="lightbox-nav lightbox-next">&#10095;</a>
+      <a href="#gallery" class="lightbox-close">&times;</a>
+    </div>
+  </div>
+
+  <div class="lightbox" id="img4">
+    <div class="lightbox-inner">
+      <a href="#img3" class="lightbox-nav lightbox-prev">&#10094;</a>
+      <img src="Images/Gallery/Ash.png" alt="Ash live performance">
+      <div class="lightbox-caption">Ash live performance</div>
+      <a href="#img5" class="lightbox-nav lightbox-next">&#10095;</a>
+      <a href="#gallery" class="lightbox-close">&times;</a>
+    </div>
+  </div>
+
+  <div class="lightbox" id="img5">
+    <div class="lightbox-inner">
+      <a href="#img4" class="lightbox-nav lightbox-prev">&#10094;</a>
+      <img src="Images/Gallery/Bini.png" alt="Bini event photo">
+      <div class="lightbox-caption">Bini event photo</div>
+      <a href="#img6" class="lightbox-nav lightbox-next">&#10095;</a>
+      <a href="#gallery" class="lightbox-close">&times;</a>
+    </div>
+  </div>
+
+  <div class="lightbox" id="img6">
+    <div class="lightbox-inner">
+      <a href="#img5" class="lightbox-nav lightbox-prev">&#10094;</a>
+      <img src="Images/Gallery/CupOfJoe.png" alt="Cup of Joe band photo">
+      <div class="lightbox-caption">Cup of Joe band photo</div>
+      <a href="#img7" class="lightbox-nav lightbox-next">&#10095;</a>
+      <a href="#gallery" class="lightbox-close">&times;</a>
+    </div>
+  </div>
+
+  <div class="lightbox" id="img7">
+    <div class="lightbox-inner">
+      <a href="#img6" class="lightbox-nav lightbox-prev">&#10094;</a>
+      <img src="Images/Gallery/DNA.png" alt="DNA performance">
+      <div class="lightbox-caption">DNA performance</div>
+      <a href="#img8" class="lightbox-nav lightbox-next">&#10095;</a>
+      <a href="#gallery" class="lightbox-close">&times;</a>
+    </div>
+  </div>
+
+  <div class="lightbox" id="img8">
+    <div class="lightbox-inner">
+      <a href="#img7" class="lightbox-nav lightbox-prev">&#10094;</a>
+      <img src="Images/Gallery/Eco.png" alt="Eco concert image">
+      <div class="lightbox-caption">Eco concert image</div>
+      <a href="#img9" class="lightbox-nav lightbox-next">&#10095;</a>
+      <a href="#gallery" class="lightbox-close">&times;</a>
+    </div>
+  </div>
+
+  <div class="lightbox" id="img9">
+    <div class="lightbox-inner">
+      <a href="#img8" class="lightbox-nav lightbox-prev">&#10094;</a>
+      <img src="Images/Gallery/Elija.png" alt="Elija performance">
+      <div class="lightbox-caption">Elija performance</div>
+      <a href="#img10" class="lightbox-nav lightbox-next">&#10095;</a>
+      <a href="#gallery" class="lightbox-close">&times;</a>
+    </div>
+  </div>
+
+  <div class="lightbox" id="img10">
+    <div class="lightbox-inner">
+      <a href="#img9" class="lightbox-nav lightbox-prev">&#10094;</a>
+      <img src="Images/Gallery/ElyBuendia.png" alt="Ely Buendia event">
+      <div class="lightbox-caption">Ely Buendia event</div>
+      <a href="#img11" class="lightbox-nav lightbox-next">&#10095;</a>
+      <a href="#gallery" class="lightbox-close">&times;</a>
+    </div>
+  </div>
+
+  <div class="lightbox" id="img11">
+    <div class="lightbox-inner">
+      <a href="#img10" class="lightbox-nav lightbox-prev">&#10094;</a>
+      <img src="Images/Gallery/FlowG.png" alt="Flow G live performance">
+      <div class="lightbox-caption">Flow G live performance</div>
+      <a href="#img12" class="lightbox-nav lightbox-next">&#10095;</a>
+      <a href="#gallery" class="lightbox-close">&times;</a>
+    </div>
+  </div>
+
+  <div class="lightbox" id="img12">
+    <div class="lightbox-inner">
+      <a href="#img11" class="lightbox-nav lightbox-prev">&#10094;</a>
+      <img src="Images/Gallery/HeyJune.png" alt="Hey June photo">
+      <div class="lightbox-caption">Hey June photo</div>
+      <a href="#img13" class="lightbox-nav lightbox-next">&#10095;</a>
+      <a href="#gallery" class="lightbox-close">&times;</a>
+    </div>
+  </div>
+
+  <div class="lightbox" id="img13">
+    <div class="lightbox-inner">
+      <a href="#img12" class="lightbox-nav lightbox-prev">&#10094;</a>
+      <img src="Images/Gallery/IVofSpades.png" alt="IV of Spades band">
+      <div class="lightbox-caption">IV of Spades band</div>
+      <a href="#img14" class="lightbox-nav lightbox-next">&#10095;</a>
+      <a href="#gallery" class="lightbox-close">&times;</a>
+    </div>
+  </div>
+
+  <div class="lightbox" id="img14">
+    <div class="lightbox-inner">
+      <a href="#img13" class="lightbox-nav lightbox-prev">&#10094;</a>
+      <img src="Images/Gallery/Kyla.png" alt="Kyla performance">
+      <div class="lightbox-caption">Kyla performance</div>
+      <a href="#img15" class="lightbox-nav lightbox-next">&#10095;</a>
+      <a href="#gallery" class="lightbox-close">&times;</a>
+    </div>
+  </div>
+
+  <div class="lightbox" id="img15">
+    <div class="lightbox-inner">
+      <a href="#img14" class="lightbox-nav lightbox-prev">&#10094;</a>
+      <img src="Images/Gallery/LolaAmour.png" alt="Lola Amour band live">
+      <div class="lightbox-caption">Lola Amour band live</div>
+      <a href="#img16" class="lightbox-nav lightbox-next">&#10095;</a>
+      <a href="#gallery" class="lightbox-close">&times;</a>
+    </div>
+  </div>
+
+  <div class="lightbox" id="img16">
+    <div class="lightbox-inner">
+      <a href="#img15" class="lightbox-nav lightbox-prev">&#10094;</a>
+      <img src="Images/Gallery/Maki.png" alt="Maki concert photo">
+      <div class="lightbox-caption">Maki concert photo</div>
+      <a href="#img17" class="lightbox-nav lightbox-next">&#10095;</a>
+      <a href="#gallery" class="lightbox-close">&times;</a>
+    </div>
+  </div>
+
+  <div class="lightbox" id="img17">
+    <div class="lightbox-inner">
+      <a href="#img16" class="lightbox-nav lightbox-prev">&#10094;</a>
+      <img src="Images/Gallery/Mdee.png" alt="Mdee event">
+      <div class="lightbox-caption">Mdee event</div>
+      <a href="#img18" class="lightbox-nav lightbox-next">&#10095;</a>
+      <a href="#gallery" class="lightbox-close">&times;</a>
+    </div>
+  </div>
+
+  <div class="lightbox" id="img18">
+    <div class="lightbox-inner">
+      <a href="#img17" class="lightbox-nav lightbox-prev">&#10094;</a>
+      <img src="Images/Gallery/Morobeat.png" alt="Morobeat performance">
+      <div class="lightbox-caption">Morobeat performance</div>
+      <a href="#img1" class="lightbox-nav lightbox-next">&#10095;</a>
+      <a href="#gallery" class="lightbox-close">&times;</a>
+    </div>
+  </div>
+  
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="HomePage">Home</a></li>
+          <li><a href="Music_Page">Music</a></li>
+          <li><a href="Comedy_Page">Sports</a></li>
+          <li><a href="Sports_Page">Comedy</a></li>
+          <li><a href="Contact_Page">News</a></li>
+          <li><a href="News_Page">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>Email: <a href="mailto:info-abc@ientertainment.com">info-abc@ientertainment.com</a></p>
+        <p>Phone: <a href="tel: +03531234567"> +0 (353) 123-4567</a></p>
+        <p>Address: 2025 Abbeylands Street, Ireland , IR</p>
+      </div>
+
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i><img src="Images/Facebook_Logo.png" alt="Facebook" width="40" height="40" style="border-radius: 8px;"></a>
+          <a href="https://www.instagram.com//"><i class="fa-brands fa-facebook"></i> <img src="Images/Instagram_Logo.png" alt="Facebook" width="40" height="40" style="border-radius: 8px;"></a>
+          <a href="https://x.com//"><i class="fa-brands fa-facebook"></i> <img src="Images/Twitter_Logo.png" alt="Facebook" width="40" height="40" style="border-radius: 8px;"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 I-Entertainment. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

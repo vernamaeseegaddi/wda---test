@@ -1,0 +1,3400 @@
+/* ================================ */
+/* Source: AboutPage.css */
+/* ================================ */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;       /* no sideways scroll for the page */
+  font-family: Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- NAVBAR ---------- */
+/* Navigation bar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: #284f26;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999; /* keeps it above all other content */
+
+  flex-wrap: wrap; /* 👈 allow wrapping instead of cutting off */
+}
+.menu-toggle {
+  display: none;
+}
+
+/* Hamburger button hidden on large screens */
+.hamburger {
+  display: none;
+  font-size: 32px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #000;
+}
+
+/* Logo text */
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  position: relative;
+  font-size: 16px;
+}
+
+/* Active (underlined) link */
+.nav-links a.active {
+  font-weight: 600;
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+}
+
+/* Hover effect */
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* Main wrapper – leave space for fixed navbar */
+.about-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 140px 20px 40px; /* top padding so content doesn't hide behind navbar */
+  
+}
+
+/* Hero / intro text */
+.about-hero {
+  text-align: center;
+  margin-bottom: 40px;
+  color:#000;
+}
+
+.about-hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color:#000;
+}
+
+.about-hero p {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color:#000;
+}
+
+/* Columns container – 3 columns on wide, 2 on medium, 1 on small */
+.about-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* Individual column/card */
+.about-column {
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 18px 20px;
+  line-height: 1.6;
+  color:#000;
+}
+
+.about-column h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color:#000;
+}
+
+.about-column h3 {
+  font-size: 1.1rem;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  color:#000;
+}
+
+/* Lists spacing */
+.about-column ul,
+.about-column ol,
+.about-column dl {
+  margin-left: 18px;
+  margin-bottom: 10px;
+}
+
+.about-column li {
+  margin-bottom: 6px;
+}
+
+/* Description list styling */
+.about-column dl dt {
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.about-column dl dd {
+  margin-left: 0;
+  margin-bottom: 6px;
+}
+
+/* Table wrapper – allow horizontal scroll on small screens */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Table styling */
+.about-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.about-table th,
+.about-table td {
+  border: 1px solid #ccc;
+  padding: 8px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.about-table thead {
+  background-color: #e6f0e5;
+  font-weight: bold;
+}
+
+/* Subgenre list */
+.subgenre-list {
+  margin-top: 8px;
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+  background-color: #111;
+  color: #f2f2f2;
+  padding: 50px 0 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 24px;      /* was 20px 60px */
+  gap: 40px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 18px;
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ff4d4d;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  text-align: center;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #888;
+}
+
+.footer-links h3,
+.footer-contact h3,
+.footer-social h3 {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #fff;
+}
+
+/* allow long email/phone to wrap instead of widening footer */
+.footer-contact p,
+.footer-contact a {
+  overflow-wrap: anywhere;
+}
+
+.about-hero-simple,about-simple-section {
+  text-align: center;
+  margin-bottom: 40px;
+  color:#000;
+}
+
+.about-hero-simple h1, about-simple-section h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color:#000;
+}
+
+.about-hero-simple p, about-simple-section p {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color:#000;
+}
+/* ========= Tablet layout (≤ 900px) ========= */
+@media (max-width: 900px) {
+  /* Navbar: reduce side padding */
+  .navbar {
+    padding: 12px 24px;
+  }
+.hamburger {
+  display: block;
+  cursor: pointer;
+  font-size: 30px;
+}
+.about-main {
+    padding: 120px 16px 30px;
+  }
+
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+
+  .about-hero p {
+    font-size: 0.95rem;
+  }
+
+/* Hide menu by default */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background-color: #284f26;
+  padding: 10px 0;
+}
+
+/* When hamburger (checkbox) is checked → show menu */
+.menu-toggle:checked + .hamburger + .nav-links {
+  display: flex;
+}
+
+/* Make menu items full width */
+.nav-links a {
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
+ 
+
+  /* Home page tiles (Band / Hiphop / etc.) */
+  .SelectMusic {
+    padding: 30px 24px;
+  }
+
+  .tile-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .tile {
+    flex: 1 1 calc(50% - 20px);
+    max-width: 260px;
+  }
+
+  /* Band / Top videos sections */
+  .section {
+    padding: 20px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .video-row {
+    max-width: 100%;
+  }
+
+  /* Footer: make it breathe on smaller screens */
+  .footer {
+    padding: 40px 24px 20px;
+  }
+
+  .footer-container {
+    padding: 20px 24px;
+    gap: 24px;
+  }
+}
+
+
+/* ========= Mobile layout (≤ 600px) ========= */
+@media (max-width: 600px) {
+  /* NAVBAR: stack logo + links */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 16px;
+    gap: 8px;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+  }
+
+  .nav-links {
+    width: 100%;
+    /* DO NOT set display here */
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-start;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+  .about-main {
+    padding: 120px 16px 30px;
+  }
+
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+
+  .about-hero p {
+    font-size: 0.95rem;
+  }
+
+ 
+
+  /* HOME PAGE TILES */
+  .SelectMusic {
+    padding: 20px 16px;
+  }
+
+  .tile-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .tile {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .tile-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;   /* keep square-ish tiles */
+  }
+
+  .TopVideos {
+    padding: 20px 16px;
+  }
+
+  /* BAND PAGE CARDS */
+  .section {
+    padding: 20px 16px;
+  }
+
+  .video-row {
+    gap: 12px;
+    padding-bottom: 8px;
+  }
+
+  .card {
+    flex: 0 0 260px;  /* keep them readable but not huge */
+  }
+
+  /* TRIVIA TABLE */
+  .table-container {
+    padding: 0 4px;
+  }
+
+  .music-table {
+    min-width: 700px;      /* still scrolls horizontally, but a bit smaller */
+    font-size: 0.85rem;
+  }
+
+  .music-table th,
+  .music-table td {
+    padding: 8px 10px;
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 30px 16px 16px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 16px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    font-size: 0.8rem;
+    padding-top: 10px;
+  }
+}
+
+/* ================================ */
+/* Source: Assessment_1_HomePageStyle.css */
+/* ================================ */
+
+/* Navigation bar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: #284f26;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999; /* keeps it above all other content */
+
+  flex-wrap: wrap; /* 👈 allow wrapping instead of cutting off */
+}
+.menu-toggle {
+  display: none;
+}
+
+/* Hamburger button hidden on large screens */
+.hamburger {
+  display: none;
+  font-size: 32px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #000;
+}
+
+/* Logo text */
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  position: relative;
+  font-size: 16px;
+}
+
+/* Active (underlined) link */
+.nav-links a.active {
+  font-weight: 600;
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+}
+
+/* Hover effect */
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.HomePageheading {
+  background: none;
+  background-image: url("Images/banaue1.png");
+  background-size: cover;
+  padding-top: 250px !important;
+  padding-bottom: 250px !important;
+  background-size: cover; /* makes the image fill the screen */
+  background-position: center 20px; /* centers the image */
+  background-repeat: no-repeat; /* no tiling */
+  /* background-attachment: fixed;     /* optional: makes background stay fixed */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  overflow: hidden; /* keeps blur inside the section */
+  position: relative;
+}
+
+.HomePageheading h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  font-size: 3.5rem;
+  color: #faf2da; /* cream tone that blends better than pure white */
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.25); /* improves readability */
+}
+.HomePageheading p {
+  text-align: center;
+  font-family: "Cooper Hewitt", sans-serif;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Basic page reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.SelectMusic {
+  position: relative;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 1px;
+}
+.SelectMusic h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  font-size: 3.5rem;
+  margin-bottom: 1px;
+}
+/* Container layout */
+.tile-row {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+/* Tile */
+.tile {
+  width: 260px; /* card width */
+  display: flex;
+  flex-direction: column;
+  /*align-items: center;*/
+  background-size: cover; /* fill the tile */
+  background-position: contain; /* center the image */
+  background-repeat: no-repeat;
+
+
+  align-items: stretch;  /* instead of center */
+}
+
+/* Label ON TOP of the image */
+.tile-label {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 8px; /* space between label and image */
+  text-align: center;
+}
+.tile-img {
+  width: 250px; /* set tile width */
+  height: 250px; /* set tile height (square) */
+  border-radius: 16px;
+  background-size: contain; /* !!!! FILL TILE !!!! */
+  background-position: center; /* center the image */
+  background-repeat: no-repeat;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background-color: #000;
+
+
+  
+  background-size: cover;      /* was: contain */
+
+  
+}
+.tile-band {
+  background-image: url("images/Band.png");
+ 
+ 
+}
+
+.tile-hiphop {
+  background-image: url("images/hiphop.jpg");
+}
+
+.tile-kundiman {
+  background-image: url("images/Kundiman.png");
+}
+
+.tile-ppop {
+  background-image: url("images/Ppop.png");
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+}
+ .tile-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+
+   
+  width: 100%;  
+
+  
+}
+
+.tile-link:hover {
+  opacity: 0.9; /* optional hover effect */
+}
+
+
+
+/* Footer Styles */
+
+.footer {
+  background-color: #111;
+  color: #f2f2f2;
+  padding: 50px 40px 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* IMPORTANT: no display:flex here, only grid */
+.footer-container {
+  max-width: 1200px; 
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 60px;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 40px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+
+
+  
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 18px;
+  color: #ccc;
+  transition: color 0.3s ease;
+
+}
+
+.social-icons a:hover {
+  color: #ff4d4d;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  text-align: center;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #888;
+}
+.footer-links h3,
+.footer-contact h3,
+.footer-social h3 {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #fff;
+}
+
+
+/* ========= Tablet layout (≤ 900px) ========= */
+@media (max-width: 900px) {
+  /* Navbar: reduce side padding */
+  .navbar {
+    padding: 12px 24px;
+  }
+.hamburger {
+  display: block;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+/* Hide menu by default */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background-color: #284f26;
+  padding: 10px 0;
+}
+
+/* When hamburger (checkbox) is checked → show menu */
+.menu-toggle:checked + .hamburger + .nav-links {
+  display: flex;
+}
+
+/* Make menu items full width */
+.nav-links a {
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
+  /* Hero / heading sections */
+  .HomePageheading {
+    padding-top: 140px;   /* a bit less than desktop */
+    padding-bottom: 40px;
+    text-align: center;
+  }
+
+  .HomePageheading h1 {
+    font-size: 2.2rem;
+  }
+
+  .HomePageheading p {
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* Home page tiles (Band / Hiphop / etc.) */
+  .SelectMusic {
+    padding: 30px 24px;
+  }
+
+  .tile-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .tile {
+    flex: 1 1 calc(50% - 20px);
+    max-width: 260px;
+  }
+
+  /* Band / Top videos sections */
+  .section {
+    padding: 20px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .video-row {
+    max-width: 100%;
+  }
+
+  /* Footer: make it breathe on smaller screens */
+  .footer {
+    padding: 40px 24px 20px;
+  }
+
+  .footer-container {
+    padding: 20px 24px;
+    gap: 24px;
+  }
+}
+
+
+/* ========= Mobile layout (≤ 600px) ========= */
+@media (max-width: 600px) {
+  /* NAVBAR: stack logo + links */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 16px;
+    gap: 8px;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+  }
+
+  .nav-links {
+    width: 100%;
+    /* DO NOT set display here */
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-start;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+
+  /* HERO / HEADING */
+  .heading {
+    padding-top: 120px;   /* account for fixed navbar */
+    padding-bottom: 30px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .HomePageheading h1 {
+    font-size: 1.8rem;
+  }
+
+  .HomePageheading p {
+    font-size: 0.9rem;
+  }
+
+  /* HOME PAGE TILES */
+  .SelectMusic {
+    padding: 20px 16px;
+  }
+
+  .tile-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .tile {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .tile-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;   /* keep square-ish tiles */
+  }
+
+  .TopVideos {
+    padding: 20px 16px;
+  }
+
+  /* BAND PAGE CARDS */
+  .section {
+    padding: 20px 16px;
+  }
+
+  .video-row {
+    gap: 12px;
+    padding-bottom: 8px;
+  }
+
+  .card {
+    flex: 0 0 260px;  /* keep them readable but not huge */
+  }
+
+  /* TRIVIA TABLE */
+  .table-container {
+    padding: 0 4px;
+  }
+
+  .music-table {
+    min-width: 700px;      /* still scrolls horizontally, but a bit smaller */
+    font-size: 0.85rem;
+  }
+
+  .music-table th,
+  .music-table td {
+    padding: 8px 10px;
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 30px 16px 16px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 16px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    font-size: 0.8rem;
+    padding-top: 10px;
+  }
+}
+
+/* ================================ */
+/* Source: BandCSS.css */
+/* ================================ */
+
+/* Navigation bar container */
+/* Navigation bar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: #284f26;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999; /* keeps it above all other content */
+
+  flex-wrap: wrap; /* 👈 allow wrapping instead of cutting off */
+}
+.menu-toggle {
+  display: none;
+}
+
+/* Hamburger button hidden on large screens */
+.hamburger {
+  display: none;
+  font-size: 32px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #000;
+}
+
+/* Logo text */
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  position: relative;
+  font-size: 16px;
+}
+
+/* Active (underlined) link */
+.nav-links a.active {
+  font-weight: 600;
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+}
+
+/* Hover effect */
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+
+.breadcrumb {
+  position: absolute;
+  top: 100px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  gap: 0.35rem;
+  padding: 4px 8px;
+  background-color: transparent;
+  color: #ffffff;
+  z-index: 20;
+}
+
+.breadcrumb ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb li {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.breadcrumb li + li::before {
+  content: "/";
+  margin: 0 0.35rem;
+  opacity: 0.8;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb li[aria-current="page"] {
+  font-weight: 700;
+}
+
+/* hero/heading containers act as breadcrumb positioning context */
+.HomePageheading,
+.TriviaPageheading,
+.NewsPageHeading,
+.BandPageHeading,
+.about-hero,
+.gallery-wrapper,
+.contact-section {
+  position: relative;
+}
+
+.BandPageHeading {
+  background: none;
+  background-color: #111;
+  background-size: cover;
+  padding-top: 100px !important;
+  padding-bottom: 50px !important;
+  background-size: cover; /* makes the image fill the screen */
+  background-position: center 20px; /* centers the image */
+  background-repeat: no-repeat; /* no tiling */
+  /* background-attachment: fixed;     /* optional: makes background stay fixed */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  overflow: hidden; /* keeps blur inside the section */
+  position: relative;
+}
+
+.BandPageHeading h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  font-size: 3.5rem;
+  color: #faf2da; /* cream tone that blends better than pure white */
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.25); /* improves readability */
+}
+.BandPageHeading p {
+  text-align: center;
+  font-family: "Cooper Hewitt", sans-serif;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+/* Basic page reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: #111;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999; /* keeps it above all other content */
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.carousel {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+}
+
+.carousel::-webkit-scrollbar {
+  height: 6px;
+}
+.carousel::-webkit-scrollbar-thumb {
+  background: #f7f5f5;
+  border-radius: 10px;
+}
+
+.card {
+  min-width: 260px;
+  flex-shrink: 0;
+}
+
+.thumb {
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.thumb img {
+  width: 100%;
+  display: block;
+  border-radius: inherit;
+}
+
+.play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 45px;
+  opacity: 0.8;
+}
+
+.title {
+  margin: 10px 0 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.meta {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.7;
+}
+.TopVideos {
+  position: relative;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 200px;
+}
+.TopVideos h2 {
+  font-family: "Cooper Hewitt", sans-serif;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+.video-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap; /* ⬅ stop wrapping to a new line  */
+  gap: 20px;
+  align-items: center;
+  overflow-x: auto; /* ⬅ enable horizontal scroll     */
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+  justify-content: space-between;
+  max-width: 1200px; /* keeps content from stretching too wide */
+  margin: 0 auto; /* center the block */
+  padding: 0 40px 60px; /* left-right space from browser edges */
+  overflow-x: auto;
+}
+
+/* each card has a fixed-ish width so total width > screen */
+.card {
+  flex: 0 0 clamp(220px, 30vw, 360px); /* no shrink, responsive width */
+}
+
+.thumb iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: 0;
+  display: block;
+}
+
+/* optional: visible scrollbar */
+.video-row::-webkit-scrollbar {
+  height: 6px;
+}
+.video-row::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 10px;
+}
+.video-row::-webkit-scrollbar-track {
+  background: #222;
+}
+
+.footer {
+  background-color: #111;
+  color: #f2f2f2;
+  padding: 50px 40px 20px;
+  font-family: "Poppins", sans-serif;
+  
+}
+
+/* IMPORTANT: no display:flex here, only grid */
+.footer-container {
+  max-width: 1200px; 
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 60px;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 40px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+
+
+  
+}
+
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 18px;
+  color: #ccc;
+  transition: color 0.3s ease;
+
+}
+
+.social-icons a:hover {
+  color: #ff4d4d;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  text-align: center;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #888;
+}
+.footer-links h3,
+.footer-contact h3,
+.footer-social h3 {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #fff;
+}
+
+
+/* ========= Tablet layout (≤ 900px) ========= */
+@media (max-width: 900px) {
+  /* Navbar: reduce side padding */
+  .navbar {
+    padding: 12px 24px;
+  }
+.hamburger {
+  display: block;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+/* Hide menu by default */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background-color: #284f26;
+  padding: 10px 0;
+}
+
+/* When hamburger (checkbox) is checked → show menu */
+.menu-toggle:checked + .hamburger + .nav-links {
+  display: flex;
+}
+
+/* Make menu items full width */
+.nav-links a {
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
+  /* Hero / heading sections */
+  .BandPageHeading {
+    padding-top: 140px;   /* a bit less than desktop */
+    padding-bottom: 40px;
+    text-align: center;
+  }
+
+  .BandPageHeading h1 {
+    font-size: 2.2rem;
+  }
+
+  .BandPageHeading p {
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* Home page tiles (Band / Hiphop / etc.) */
+  .SelectMusic {
+    padding: 30px 24px;
+  }
+
+  .tile-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .tile {
+    flex: 1 1 calc(50% - 20px);
+    max-width: 260px;
+  }
+
+  /* Band / Top videos sections */
+  .section {
+    padding: 20px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .video-row {
+    max-width: 100%;
+  }
+
+  /* Footer: make it breathe on smaller screens */
+  .footer {
+    padding: 40px 24px 20px;
+  }
+
+  .footer-container {
+    padding: 20px 24px;
+    gap: 24px;
+  }
+}
+
+
+/* ========= Mobile layout (≤ 600px) ========= */
+@media (max-width: 600px) {
+  /* NAVBAR: stack logo + links */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 16px;
+    gap: 8px;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+  }
+
+  .nav-links {
+    width: 100%;
+    /* DO NOT set display here */
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-start;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+
+  /* HERO / HEADING */
+  .BandPageHeading {
+    padding-top: 120px;   /* account for fixed navbar */
+    padding-bottom: 30px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .BandPageHeading h1 {
+    font-size: 1.8rem;
+  }
+
+  .BandPageHeading p {
+    font-size: 0.9rem;
+  }
+
+  /* HOME PAGE TILES */
+  .SelectMusic {
+    padding: 20px 16px;
+  }
+
+  .tile-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .tile {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .tile-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;   /* keep square-ish tiles */
+  }
+
+  .TopVideos {
+    padding: 20px 16px;
+  }
+
+  /* BAND PAGE CARDS */
+  .section {
+    padding: 20px 16px;
+  }
+
+  .video-row {
+    gap: 12px;
+    padding-bottom: 8px;
+  }
+
+  .card {
+    flex: 0 0 260px;  /* keep them readable but not huge */
+  }
+
+  /* TRIVIA TABLE */
+  .table-container {
+    padding: 0 4px;
+  }
+
+  .music-table {
+    min-width: 700px;      /* still scrolls horizontally, but a bit smaller */
+    font-size: 0.85rem;
+  }
+
+  .music-table th,
+  .music-table td {
+    padding: 8px 10px;
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 30px 16px 16px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 16px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    font-size: 0.8rem;
+    padding-top: 10px;
+  }
+}
+
+/* ================================ */
+/* Source: ContactUsPage.css */
+/* ================================ */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;       /* no sideways scroll for the page */
+  font-family: Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ---------- NAVBAR ---------- */
+/* Navigation bar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: #284f26;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999; /* keeps it above all other content */
+
+  flex-wrap: wrap; /* 👈 allow wrapping instead of cutting off */
+}
+.menu-toggle {
+  display: none;
+}
+
+/* Hamburger button hidden on large screens */
+.hamburger {
+  display: none;
+  font-size: 32px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #000;
+}
+
+/* Logo text */
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  position: relative;
+  font-size: 16px;
+}
+
+/* Active (underlined) link */
+.nav-links a.active {
+  font-weight: 600;
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+}
+
+/* Hover effect */
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- HEADING SECTION ---------- */
+.heading {
+  background-color: #D2B179;
+  background-image: url("Images/Banaue2.png");
+  background-size: cover;
+  background-position: center 20px;
+  background-repeat: no-repeat;
+
+  width: 100%;
+  padding-top: 100px;     /* space for fixed navbar */
+  padding-bottom: 50px;
+  color: white;
+  text-align: center;
+}
+
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 150px 20px;
+}
+
+.contact-container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+.contact-container h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.contact-container p {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #666;
+}
+
+.contact-form .input-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #444;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    resize: none;
+}
+
+/* Remove resize for select just in case (has no effect but harmless) */
+.contact-form select {
+    background-color: #fff;
+}
+
+/* Focus styles */
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #0056b3;
+}
+
+/* --- POPUP (CSS ONLY) --- */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* show popup when #sent is targeted */
+.popup:target {
+    display: flex;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+    width: 260px;
+}
+
+.close-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 25px;
+    background: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.close-btn:hover {
+    background: #0056b3;
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+  background-color: #111;
+  color: #f2f2f2;
+  padding: 50px 0 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 24px;      /* was 20px 60px */
+  gap: 40px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 18px;
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ff4d4d;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  text-align: center;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #888;
+}
+
+.footer-links h3,
+.footer-contact h3,
+.footer-social h3 {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #fff;
+}
+
+/* allow long email/phone to wrap instead of widening footer */
+.footer-contact p,
+.footer-contact a {
+  overflow-wrap: anywhere;
+}
+
+/* ========= Tablet layout (≤ 900px) ========= */
+@media (max-width: 900px) {
+  /* Navbar: reduce side padding */
+  .navbar {
+    padding: 12px 24px;
+  }
+.hamburger {
+  display: block;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+/* Hide menu by default */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background-color: #284f26;
+  padding: 10px 0;
+}
+
+/* When hamburger (checkbox) is checked → show menu */
+.menu-toggle:checked + .hamburger + .nav-links {
+  display: flex;
+}
+
+/* Make menu items full width */
+.nav-links a {
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
+  /* Hero / heading sections */
+  .heading {
+    padding-top: 140px;   /* a bit less than desktop */
+    padding-bottom: 40px;
+    text-align: center;
+  }
+
+  .heading h1 {
+    font-size: 2.2rem;
+  }
+
+  .heading p {
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* Home page tiles (Band / Hiphop / etc.) */
+  .SelectMusic {
+    padding: 30px 24px;
+  }
+
+  .tile-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .tile {
+    flex: 1 1 calc(50% - 20px);
+    max-width: 260px;
+  }
+
+  /* Band / Top videos sections */
+  .section {
+    padding: 20px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .video-row {
+    max-width: 100%;
+  }
+
+  /* Footer: make it breathe on smaller screens */
+  .footer {
+    padding: 40px 24px 20px;
+  }
+
+  .footer-container {
+    padding: 20px 24px;
+    gap: 24px;
+  }
+}
+
+
+/* ========= Mobile layout (≤ 600px) ========= */
+@media (max-width: 600px) {
+  /* NAVBAR: stack logo + links */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 16px;
+    gap: 8px;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+  }
+
+  .nav-links {
+    width: 100%;
+    /* DO NOT set display here */
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-start;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+
+  /* HERO / HEADING */
+  .heading {
+    padding-top: 120px;   /* account for fixed navbar */
+    padding-bottom: 30px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .heading h1 {
+    font-size: 1.8rem;
+  }
+
+  .heading p {
+    font-size: 0.9rem;
+  }
+
+  /* HOME PAGE TILES */
+  .SelectMusic {
+    padding: 20px 16px;
+  }
+
+  .tile-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .tile {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .tile-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;   /* keep square-ish tiles */
+  }
+
+  .TopVideos {
+    padding: 20px 16px;
+  }
+
+  /* BAND PAGE CARDS */
+  .section {
+    padding: 20px 16px;
+  }
+
+  .video-row {
+    gap: 12px;
+    padding-bottom: 8px;
+  }
+
+  .card {
+    flex: 0 0 260px;  /* keep them readable but not huge */
+  }
+
+  /* TRIVIA TABLE */
+  .table-container {
+    padding: 0 4px;
+  }
+
+  .music-table {
+    min-width: 700px;      /* still scrolls horizontally, but a bit smaller */
+    font-size: 0.85rem;
+  }
+
+  .music-table th,
+  .music-table td {
+    padding: 8px 10px;
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 30px 16px 16px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 16px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    font-size: 0.8rem;
+    padding-top: 10px;
+  }
+}
+
+/* ================================ */
+/* Source: Gallery.css */
+/* ================================ */
+
+/* =========================================================
+   BASIC RESET
+========================================================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+ 
+  color: #333;
+
+
+  background: linear-gradient(
+    to bottom,
+    #0C0C0D 0%,
+    #0A0A0B 50%,
+    #0C0C0D 100%
+  );
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(
+    circle at top center,
+    rgba(198,169,139,0.18),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.gallery-page-bg {
+    background: linear-gradient(180deg, #000000 0%, #1A1A1A 40%, #2E2E2E 100%);
+    color: #111;
+}
+
+/* ---------- NAVBAR ---------- */
+/* Navigation bar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: #284f26;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999; /* keeps it above all other content */
+
+  flex-wrap: wrap; /* 👈 allow wrapping instead of cutting off */
+}
+.menu-toggle {
+  display: none;
+}
+
+/* Hamburger button hidden on large screens */
+.hamburger {
+  display: none;
+  font-size: 32px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #000;
+}
+
+/* Logo text */
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  position: relative;
+  font-size: 16px;
+}
+
+/* Active (underlined) link */
+.nav-links a.active {
+  font-weight: 600;
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+}
+
+/* Hover effect */
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* =========================================================
+   CENTERED MAIN WRAPPER
+========================================================= */
+.centered {
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+/* =========================================================
+   GALLERY WRAPPER
+========================================================= */
+.gallery-wrapper {
+     background: linear-gradient(180deg, #000000 0%, #1A1A1A 40%, #2E2E2E 100%);
+    color: #111;
+  padding: 80px;
+  border-radius: 4px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  animation: slideFadeIn 0.9s ease-out forwards;
+   margin-top: 130px; 
+}
+
+@keyframes slideFadeIn {
+  0% { opacity: 0; transform: translateY(25px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.gallery-heading {
+  margin-bottom: 24px;
+  font-size: 36px;
+  letter-spacing: 1px;
+  color: white;
+  text-align: center;
+}
+
+/* =========================================================
+   GALLERY GRID
+========================================================= */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  flex: 1 0 21%;
+  max-width: 23%;
+  cursor: pointer;
+  text-decoration: none;
+  opacity: 0;
+  animation: fadeThumbs 0.8s ease forwards;
+}
+
+/* Stagger animation */
+.gallery-item:nth-child(1) { animation-delay: 0.1s; }
+.gallery-item:nth-child(2) { animation-delay: 0.15s; }
+.gallery-item:nth-child(3) { animation-delay: 0.2s; }
+.gallery-item:nth-child(4) { animation-delay: 0.25s; }
+.gallery-item:nth-child(5) { animation-delay: 0.3s; }
+.gallery-item:nth-child(6) { animation-delay: 0.35s; }
+.gallery-item:nth-child(7) { animation-delay: 0.4s; }
+.gallery-item:nth-child(8) { animation-delay: 0.45s; }
+.gallery-item:nth-child(9) { animation-delay: 0.5s; }
+.gallery-item:nth-child(10) { animation-delay: 0.55s; }
+.gallery-item:nth-child(11) { animation-delay: 0.6s; }
+.gallery-item:nth-child(12) { animation-delay: 0.65s; }
+.gallery-item:nth-child(13) { animation-delay: 0.7s; }
+.gallery-item:nth-child(14) { animation-delay: 0.75s; }
+.gallery-item:nth-child(15) { animation-delay: 0.8s; }
+.gallery-item:nth-child(16) { animation-delay: 0.85s; }
+.gallery-item:nth-child(17) { animation-delay: 0.9s; }
+.gallery-item:nth-child(18) { animation-delay: 0.95s; }
+
+@keyframes fadeThumbs {
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* Thumbnail image */
+.gallery-item img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+/* Hover overlay + zoom */
+.gallery-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.25);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.05);
+}
+
+.gallery-item:hover::after {
+  opacity: 1;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+@media (max-width: 900px) {
+  .gallery-wrapper { padding: 20px; }
+  .gallery-item { flex: 1 0 30%; max-width: 32%; }
+}
+
+@media (max-width: 600px) {
+  .gallery-item { flex: 1 0 48%; max-width: 48%; }
+}
+
+/* =========================================================
+   LIGHTBOX (PURE CSS, NO BLINKING)
+========================================================= */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+
+  /* NO fade transition → prevents blinking */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.lightbox:target {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.lightbox-inner {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  background: #222;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.6);
+  overflow: hidden;
+
+  /* Smooth open animation */
+  animation: lightboxPop .35s ease-out forwards;
+}
+
+@keyframes lightboxPop {
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* Main lightbox image */
+.lightbox:target .lightbox-inner img {
+  display: block;
+  max-width: 100%;
+  max-height: calc(90vh - 60px);
+  margin: 0 auto;
+  animation: lightboxImageSlide 0.35s ease-out;
+}
+
+/* Non-blinking slide+fade for next/previous */
+@keyframes lightboxImageSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(16px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* Caption bar */
+.lightbox-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.9);
+  color: #fff;
+  text-align: center;
+  padding: 10px 16px;
+  font-size: 14px;
+  letter-spacing: .05em;
+}
+
+/* Arrows */
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-decoration: none;
+  font-size: 40px;
+  color: #fff;
+  padding: 8px 14px;
+  background: rgba(0,0,0,0.55);
+  border-radius: 3px;
+}
+
+.lightbox-prev { left: 10px; }
+.lightbox-next { right: 10px; }
+
+/* Close (X) */
+.lightbox-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  text-decoration: none;
+  font-size: 32px;
+  color: #fff;
+  padding: 4px 10px;
+  background: rgba(0,0,0,0.7);
+  border-radius: 2px;
+}
+
+/* Hover effects */
+.lightbox-close:hover,
+.lightbox-nav:hover {
+  background: rgba(0,0,0,0.9);
+}
+
+
+
+/* ---------- FOOTER ---------- */
+.footer {
+  background-color: #111;
+  color: #f2f2f2;
+  padding: 50px 0 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 24px;      /* was 20px 60px */
+  gap: 40px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 18px;
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ff4d4d;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  text-align: center;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #888;
+}
+
+.footer-links h3,
+.footer-contact h3,
+.footer-social h3 {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #fff;
+}
+
+/* allow long email/phone to wrap instead of widening footer */
+.footer-contact p,
+.footer-contact a {
+  overflow-wrap: anywhere;
+}
+
+
+/* ========= Tablet layout (≤ 900px) ========= */
+@media (max-width: 900px) {
+  /* Navbar: reduce side padding */
+  .navbar {
+    padding: 12px 24px;
+  }
+.hamburger {
+  display: block;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+/* Hide menu by default */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background-color: #284f26;
+  padding: 10px 0;
+}
+
+/* When hamburger (checkbox) is checked → show menu */
+.menu-toggle:checked + .hamburger + .nav-links {
+  display: flex;
+}
+
+/* Make menu items full width */
+.nav-links a {
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
+  /* Footer: make it breathe on smaller screens */
+  .footer {
+    padding: 40px 24px 20px;
+  }
+
+  .footer-container {
+    padding: 20px 24px;
+    gap: 24px;
+  }
+}
+
+
+/* ========= Mobile layout (≤ 600px) ========= */
+@media (max-width: 600px) {
+  /* NAVBAR: stack logo + links */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 16px;
+    gap: 8px;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+  }
+
+  .nav-links {
+    width: 100%;
+    /* DO NOT set display here */
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-start;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+  /* FOOTER */
+  .footer {
+    padding: 30px 16px 16px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 16px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    font-size: 0.8rem;
+    padding-top: 10px;
+  }
+}
+
+/* ================================ */
+/* Source: NewsPage.css */
+/* ================================ */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;       /* no sideways scroll for the page */
+  font-family: Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- NAVBAR ---------- */
+/* Navigation bar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: #284f26;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999; /* keeps it above all other content */
+
+  flex-wrap: wrap; /* 👈 allow wrapping instead of cutting off */
+}
+.menu-toggle {
+  display: none;
+}
+
+/* Hamburger button hidden on large screens */
+.hamburger {
+  display: none;
+  font-size: 32px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #000;
+}
+
+/* Logo text */
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  position: relative;
+  font-size: 16px;
+}
+
+/* Active (underlined) link */
+.nav-links a.active {
+  font-weight: 600;
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+}
+
+/* Hover effect */
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- HEADING SECTION ---------- */
+.NewsPageHeading {
+  background-color: #D2B179;
+  background-image: url("Images/Banaue2.png");
+  background-size: cover;
+  background-position: center 20px;
+  background-repeat: no-repeat;
+
+  width: 100%;
+  padding-top: 250px;     /* space for fixed navbar */
+  padding-bottom: 250px;
+  color: white;
+  text-align: center;
+
+}
+.AboutPageHeading {
+  background-color: #D2B179;
+  background-image: url("Images/AboutPage.png");
+  background-size: cover;
+  background-position: center 20px;
+  background-repeat: no-repeat;
+
+  width: 100%;
+  padding-top: 250px;     /* space for fixed navbar */
+  padding-bottom: 250px;
+  color: black;
+  text-align: center;
+
+}
+/* ---------- TABLE STYLES ---------- */
+
+.table-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto 60px;   /* breathing room from other content */
+  padding: 0 10px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.music-table {
+  margin: 0 auto;
+  background: rgba(12, 12, 13, 0.9);     /* deep charcoal to match page bg */
+  min-width: 1000px;
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;                      /* keep rounded corners clean */
+}
+
+/* table caption (title) */
+.music-table caption {
+  caption-side: top;
+  padding: 14px 16px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #f8edd0;                        /* warm light tone */
+  background-color: #d2b179;
+}
+
+/* visible borders around whole table and each cell */
+.music-table,
+.music-table th,
+.music-table td {
+  border: 1px solid rgba(255, 255, 255, 0.12);  /* subtle, not too harsh */
+}
+.music-table,
+.music-table th,
+.music-table td,
+.music-table tr {
+  background: #ffffff !important;   /* pure white */
+  color: #000000 !important;        /* pure black text */
+  border-color: #ccc !important;    /* clean borders */
+}
+.music-table th {
+  background: #284f26;                  /* matches navbar green */
+  color: #fdfaf2;
+  padding: 12px 14px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.music-table td {
+  padding: 10px 14px;
+  color: #f5f5f5;                        /* light text for dark bg */
+}
+
+/* zebra striping */
+.music-table tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.music-table tr:nth-child(odd) {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+/* hover highlight with Banaue-style warm gold */
+.music-table tr:hover {
+  background: rgba(210, 177, 121, 0.28);
+  transition: background 0.25s ease;
+}
+
+/* links inside the table */
+.music-table a {
+  color: #0000EE;                        /* warm accent that pops */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.music-table a:hover {
+  text-decoration: underline;
+  color: #ffe29b;
+}
+
+
+/* ---------- FOOTER ---------- */
+.footer {
+  background-color: #111;
+  color: #f2f2f2;
+  padding: 50px 0 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 24px;      /* was 20px 60px */
+  gap: 40px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 18px;
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ff4d4d;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  text-align: center;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #888;
+}
+
+.footer-links h3,
+.footer-contact h3,
+.footer-social h3 {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #fff;
+}
+
+/* allow long email/phone to wrap instead of widening footer */
+.footer-contact p,
+.footer-contact a {
+  overflow-wrap: anywhere;
+}
+
+
+/* ========= Tablet layout (≤ 900px) ========= */
+@media (max-width: 900px) {
+  /* Navbar: reduce side padding */
+  .navbar {
+    padding: 12px 24px;
+  }
+.hamburger {
+  display: block;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+/* Hide menu by default */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background-color: #284f26;
+  padding: 10px 0;
+}
+
+/* When hamburger (checkbox) is checked → show menu */
+.menu-toggle:checked + .hamburger + .nav-links {
+  display: flex;
+}
+
+/* Make menu items full width */
+.nav-links a {
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
+  /* Hero / heading sections */
+  .NewsPageHeading {
+    padding-top: 140px;   /* a bit less than desktop */
+    padding-bottom: 40px;
+    text-align: center;
+  }
+
+  .NewsPageHeading h1 {
+    font-size: 2.2rem;
+  }
+
+  .NewsPageHeading p {
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* Home page tiles (Band / Hiphop / etc.) */
+  .SelectMusic {
+    padding: 30px 24px;
+  }
+
+  .tile-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .tile {
+    flex: 1 1 calc(50% - 20px);
+    max-width: 260px;
+  }
+
+  /* Band / Top videos sections */
+  .section {
+    padding: 20px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .video-row {
+    max-width: 100%;
+  }
+
+  /* Footer: make it breathe on smaller screens */
+  .footer {
+    padding: 40px 24px 20px;
+  }
+
+  .footer-container {
+    padding: 20px 24px;
+    gap: 24px;
+  }
+}
+
+
+/* ========= Mobile layout (≤ 600px) ========= */
+@media (max-width: 600px) {
+  /* NAVBAR: stack logo + links */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 16px;
+    gap: 8px;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+  }
+
+  .nav-links {
+    width: 100%;
+    /* DO NOT set display here */
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-start;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+
+  /* HERO / HEADING */
+  .NewsPageHeading {
+    padding-top: 120px;   /* account for fixed navbar */
+    padding-bottom: 30px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .NewsPageHeading h1 {
+    font-size: 1.8rem;
+  }
+
+  .NewsPageHeading p {
+    font-size: 0.9rem;
+  }
+
+  /* HOME PAGE TILES */
+  .SelectMusic {
+    padding: 20px 16px;
+  }
+
+  .tile-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .tile {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .tile-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;   /* keep square-ish tiles */
+  }
+
+  .TopVideos {
+    padding: 20px 16px;
+  }
+
+  /* BAND PAGE CARDS */
+  .section {
+    padding: 20px 16px;
+  }
+
+  .video-row {
+    gap: 12px;
+    padding-bottom: 8px;
+  }
+
+  .card {
+    flex: 0 0 260px;  /* keep them readable but not huge */
+  }
+
+  /* TRIVIA TABLE */
+  .table-container {
+    padding: 0 4px;
+  }
+
+  .music-table {
+    min-width: 700px;      /* still scrolls horizontally, but a bit smaller */
+    font-size: 0.85rem;
+  }
+
+  .music-table th,
+  .music-table td {
+    padding: 8px 10px;
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 30px 16px 16px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 16px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    font-size: 0.8rem;
+    padding-top: 10px;
+  }
+}
+
+/* ================================ */
+/* Source: TriviaCSS.css */
+/* ================================ */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;       /* no sideways scroll for the page */
+  font-family: Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- NAVBAR ---------- */
+/* Navigation bar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: #284f26;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999; /* keeps it above all other content */
+
+  flex-wrap: wrap; /* 👈 allow wrapping instead of cutting off */
+}
+.menu-toggle {
+  display: none;
+}
+
+/* Hamburger button hidden on large screens */
+.hamburger {
+  display: none;
+  font-size: 32px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #000;
+}
+
+/* Logo text */
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  position: relative;
+  font-size: 16px;
+}
+
+/* Active (underlined) link */
+.nav-links a.active {
+  font-weight: 600;
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+}
+
+/* Hover effect */
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- HEADING SECTION ---------- */
+.TriviaPageheading {
+  background-color: #D2B179;
+  background-image: url("Images/Banaue2.png");
+  background-size: cover;
+  background-position: center 20px;
+  background-repeat: no-repeat;
+
+  width: 100%;
+  padding-top: 100px;     /* space for fixed navbar */
+  padding-bottom: 50px;
+  color: white;
+  text-align: center;
+}
+
+/* ---------- TABLE STYLES ---------- */
+.table-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+  overflow-x: auto;        /* horizontal scroll for table only */
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.music-table {
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.4);   /* dark overlay so text & borders are readable */
+  min-width: 1000px;                /* force scroll on small screens */
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* table caption (title) */
+.music-table caption {
+  caption-side: top;
+  padding: 12px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #111;
+}
+
+/* visible borders around whole table and each cell */
+.music-table,
+.music-table th,
+.music-table td {
+  border: 2px solid #fff;          /* white borders so they pop */
+}
+
+.music-table th {
+  background: #839D73;
+  color: black;
+  padding: 10px 12px;
+  text-align: center;
+}
+
+.music-table td {
+  padding: 8px 12px;
+  color: black;
+}
+
+.music-table tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.music-table tr:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transition: background 0.3s;
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+  background-color: #111;
+  color: #f2f2f2;
+  padding: 50px 0 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 24px;      /* was 20px 60px */
+  gap: 40px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 18px;
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ff4d4d;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  text-align: center;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #888;
+}
+
+.footer-links h3,
+.footer-contact h3,
+.footer-social h3 {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #fff;
+}
+
+/* allow long email/phone to wrap instead of widening footer */
+.footer-contact p,
+.footer-contact a {
+  overflow-wrap: anywhere;
+}
+
+
+/* ========= Tablet layout (≤ 900px) ========= */
+@media (max-width: 900px) {
+  /* Navbar: reduce side padding */
+  .navbar {
+    padding: 12px 24px;
+  }
+.hamburger {
+  display: block;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+/* Hide menu by default */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background-color: #284f26;
+  padding: 10px 0;
+}
+
+/* When hamburger (checkbox) is checked → show menu */
+.menu-toggle:checked + .hamburger + .nav-links {
+  display: flex;
+}
+
+/* Make menu items full width */
+.nav-links a {
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
+  /* Hero / heading sections */
+  .TriviaPageheading {
+    padding-top: 140px;   /* a bit less than desktop */
+    padding-bottom: 40px;
+    text-align: center;
+  }
+
+  .TriviaPageheading h1 {
+    font-size: 2.2rem;
+  }
+
+  .TriviaPageheading p {
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* Home page tiles (Band / Hiphop / etc.) */
+  .SelectMusic {
+    padding: 30px 24px;
+  }
+
+  .tile-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .tile {
+    flex: 1 1 calc(50% - 20px);
+    max-width: 260px;
+  }
+
+  /* Band / Top videos sections */
+  .section {
+    padding: 20px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .video-row {
+    max-width: 100%;
+  }
+
+  /* Footer: make it breathe on smaller screens */
+  .footer {
+    padding: 40px 24px 20px;
+  }
+
+  .footer-container {
+    padding: 20px 24px;
+    gap: 24px;
+  }
+}
+
+
+/* ========= Mobile layout (≤ 600px) ========= */
+@media (max-width: 600px) {
+  /* NAVBAR: stack logo + links */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 16px;
+    gap: 8px;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+  }
+
+  .nav-links {
+    width: 100%;
+    /* DO NOT set display here */
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-start;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+
+  /* HERO / HEADING */
+  .TriviaPageheading {
+    padding-top: 120px;   /* account for fixed navbar */
+    padding-bottom: 30px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .TriviaPageheading h1 {
+    font-size: 1.8rem;
+  }
+
+  .TriviaPageheading p {
+    font-size: 0.9rem;
+  }
+
+  /* HOME PAGE TILES */
+  .SelectMusic {
+    padding: 20px 16px;
+  }
+
+  .tile-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .tile {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .tile-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;   /* keep square-ish tiles */
+  }
+
+  .TopVideos {
+    padding: 20px 16px;
+  }
+
+  /* BAND PAGE CARDS */
+  .section {
+    padding: 20px 16px;
+  }
+
+  .video-row {
+    gap: 12px;
+    padding-bottom: 8px;
+  }
+
+  .card {
+    flex: 0 0 260px;  /* keep them readable but not huge */
+  }
+
+  /* TRIVIA TABLE */
+  .table-container {
+    padding: 0 4px;
+  }
+
+  .music-table {
+    min-width: 700px;      /* still scrolls horizontally, but a bit smaller */
+    font-size: 0.85rem;
+  }
+
+  .music-table th,
+  .music-table td {
+    padding: 8px 10px;
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 30px 16px 16px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 16px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    font-size: 0.8rem;
+    padding-top: 10px;
+  }
+}
