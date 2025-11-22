@@ -1,0 +1,2 @@
+# wda --test
+wda test
